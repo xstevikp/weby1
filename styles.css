@@ -1,0 +1,11 @@
+#map{
+	border: 2px solid black;
+	width: 80%;
+	height: 630px;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
+}
