@@ -1,0 +1,13 @@
+<svg width="400" height="300" id="krizovatka1" class="krizovatka1" xmlns="http://www.w3.org/2000/svg" >
+	<rect x="0" y="0" height="300" width="400" fill="lightgreen"/>
+	<polygon fill="gray" points="0,50 400,50 400,150 250,150 250,300 150,300 150,150 0,150 0,50"/>
+	<line x1="10" y1="100" x2="40" y2="100" stroke="white"/>
+	<line x1="65" y1="100" x2="95" y2="100" stroke="white"/>
+	<line x1="120" y1="100" x2="150" y2="100" stroke="white"/>
+	<line x1="250" y1="100" x2="280" y2="100" stroke="white"/>
+	<line x1="305" y1="100" x2="335" y2="100" stroke="white"/>
+	<line x1="360" y1="100" x2="390" y2="100" stroke="white"/>
+	<line x1="200" y1="150" x2="200" y2="180" stroke="white"/>
+	<line x1="200" y1="205" x2="200" y2="235" stroke="white"/>
+	<line x1="200" y1="260" x2="200" y2="290" stroke="white"/>
+</svg>
