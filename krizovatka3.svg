@@ -1,0 +1,22 @@
+<svg width="400" height="300" id="krizovatka1" class="krizovatka1" xmlns="http://www.w3.org/2000/svg" >
+	<rect x="0" y="0" height="300" width="400" fill="lightgreen"/>
+	<polygon fill="gray" points="0,50 400,50 400,150 250,150 250,300 150,300 150,150 0,150 0,50"/>
+	<line x1="10" y1="100" x2="40" y2="100" stroke="white"/>
+	<line x1="65" y1="100" x2="95" y2="100" stroke="white"/>
+	<line x1="120" y1="100" x2="150" y2="100" stroke="white"/>
+	<line x1="250" y1="100" x2="280" y2="100" stroke="white"/>
+	<line x1="305" y1="100" x2="335" y2="100" stroke="white"/>
+	<line x1="360" y1="100" x2="390" y2="100" stroke="white"/>
+	<line x1="200" y1="150" x2="200" y2="180" stroke="white"/>
+	<line x1="200" y1="205" x2="200" y2="235" stroke="white"/>
+	<line x1="200" y1="260" x2="200" y2="290" stroke="white"/>
+	<polygon fill="white" points="130,150 150,170 130,190 110,170 130,150"/>
+	<polygon fill="yellow" points="130,155 145,170 130,185 115,170 130,155"/>
+	<line x1="110" y1="170" x2="80" y2="170" stroke="black"/>
+	<polygon fill="white" points="270,150 290,170 270,190 250,170 270,150"/>
+	<polygon fill="yellow" points="270,155 285,170 270,185 255,170 270,155"/>
+	<line x1="270" y1="190" x2="270" y2="220" stroke="black"/>
+	<polygon fill="red" points="250,50 250,10 290,30 250,50"/>
+	<polygon fill="white" points="255,42 255,18 280,30 255,42"/>
+	<line x1="290" y1="30" x2="320" y2="30" stroke="black"/>
+</svg>
