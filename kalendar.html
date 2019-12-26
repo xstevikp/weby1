@@ -1,0 +1,132 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>Meniny</title>
+<style>
+
+</style>
+
+</head>
+
+<body>
+<button type="button" onclick="loadXMLDoc2()">
+Zisti datum menin zadaneho mena</button>
+
+<button type="button" onclick="loadXMLDoc()">
+Zisti meniny podla zadaneho datumu</button>
+<br>
+<input type="name" name="name" id="name">
+<input type="date" name="date" id="date">
+
+<p id="demo"></p>
+
+
+
+
+<script>
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      getN(this);
+    }
+  };
+  xmlhttp.open("GET", "meniny.xml", true);
+  xmlhttp.send();
+}
+
+function loadXMLDoc2() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      getD(this);
+    }
+  };
+  xmlhttp.open("GET", "meniny.xml", true);
+  xmlhttp.send();
+}
+
+
+
+function getN(xml) {
+
+
+  var x, y, i, xmlDoc, txt;
+  xmlDoc = xml.responseXML;
+  txt = "";
+  x = xmlDoc.getElementsByTagName("den");
+  y = xmlDoc.getElementsByTagName("SKd");
+ /* var y = document.getElementById('name').value;
+y.toUpperCase();
+var yy = y.charAt(0).toUpperCase() + y.slice(1)*/
+
+
+ var u = new Date(date.value);
+ var month = u.getMonth();
+ var day = u.getDate();
+
+ day = day - 1; // bez -1 to davo o jedna vacsie 
+ month = month +1 ;// bez +1 to davo o jedno mensie
+ var m = month.toString();
+ var d = day.toString();
+  
+ var firstTwo;
+ var secondTwo;
+ if(day < 9){
+	secondTwo = 0 + d;
+ }else{
+	secondTwo = d;
+ }
+ if(month < 9){
+	firstTwo = 0 + m;
+ }else{
+	firstTwo = m;
+ }
+ var together = firstTwo+ secondTwo;
+ 
+ 
+ 
+  for (i = 0; i< x.length; i++) {
+	//if(x[i].childNodes[0].nodeValue == yy){
+	if(x[i].childNodes[0].nodeValue == together){
+	 txt += y[i].childNodes[0].nodeValue + "<br>";
+ // }
+	}
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+
+
+function getD(xml) {
+  var x,x2,x3,x4,x5, y, i, xmlDoc, txt;
+  xmlDoc = xml.responseXML;
+  txt = "";
+  x = xmlDoc.getElementsByTagName("SK");
+  x2 = xmlDoc.getElementsByTagName("CZ");
+  x3 = xmlDoc.getElementsByTagName("HU");
+  x4 = xmlDoc.getElementsByTagName("PL");
+  x5 = xmlDoc.getElementsByTagName("AT");
+  
+  var y = document.getElementById('name').value;
+  //y.toUpperCase();
+ // var yy = y.charAt(0).toUpperCase() + y.slice(1)
+
+
+ for (i = 0; i< x.length; i++) {
+	if(x[i].childNodes[0].nodeValue == y ){
+	   txt += x[i].childNodes[0].nodeValue + "<br>";
+	}
+	if(x2[i].childNodes[0].nodeValue == y ){
+	   txt += x2[i].childNodes[0].nodeValue + "<br>";
+	}
+ }
+  document.getElementById("demo").innerHTML = txt;
+}
+
+
+</script>
+
+</body>
+</html>
